@@ -86,6 +86,16 @@ $ php artisan db:seed
 
 # Running app
 
+## Manual
+
 ```console
 $ composer run dev
+```
+
+## Docker
+
+```console
+$ docker compose up --build --detach
+$ docker exec -it supplycart_app sh -c "php artisan migrate"
+$ docker exec -it supplycart_app sh -c "php artisan db:seed"
 ```
